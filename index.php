@@ -54,6 +54,27 @@ $data_list = [
     ]
 
 ];
+
+function sum_format($number)
+{
+$number = ceil($number);
+    $f=true;
+if($number>=1000){
+    $price_n = number_format($number,0,'.',' ');
+}
+else{
+    $price_n=$number;
+}
+
+if($f==true){
+    return $price_n.'<b class=\"rub\">р</b>';
+}
+else{
+    return $price_n;
+}
+
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -132,7 +153,7 @@ $data_list = [
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost"><?=$value['price']?><b class="rub">р</b></span>
+                            <span class="lot__cost"><?=sum_format($value['price']);?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
