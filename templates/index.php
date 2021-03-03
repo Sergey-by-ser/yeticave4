@@ -31,7 +31,7 @@
                             <span class="lot__cost"><?=sum_format($value['price']);?></span>
                         </div>
                         <div class="lot__timer timer">
-                            12:23
+                            <?=timer_to();?>
                         </div>
                     </div>
                 </div>
