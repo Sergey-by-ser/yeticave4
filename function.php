@@ -5,9 +5,9 @@ $user_name = 'Sergey'; // укажите здесь ваше имя
 
 $categories_list = [
     'board' => 'Доски и лыжи',
-    'fastenings' => 'крепления',
-    'boots' => 'ботинки',
-    'clothing' => 'одежда',
+    'fastenings' => 'Крепления',
+    'boots' => 'Ботинки',
+    'clothing' => 'Одежда',
     'tools' => 'Инструменты',
     'other' => 'Разное',
 ];
