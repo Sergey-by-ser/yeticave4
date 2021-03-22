@@ -1,5 +1,5 @@
 CREATE TABLE categories(
-                           categ_id int AUTO_INCREMENT,
+                           categ_id varchar(100),
                            categ_name varchar(50),
                            CONSTRAINT categ_primary PRIMARY KEY (categ_id,categ_name)
 );
@@ -16,7 +16,7 @@ CREATE TABLE lots(
                      lot_step int,
                      lot_user_id int,
                      lot_winner_id int,
-                     lot_categ_id int
+                     lot_categ_id varchar(100)
 
 
 
