@@ -1,23 +1,36 @@
 <?php
-$link = mysqli_connect('127.0.0.1','root','','yeticave');
-mysqli_set_charset($link,'utf8');
-
-
-
-
-$query = mysqli_query($link, "SELECT categ_name from categories");
-if ($query){
-    echo mysqli_error($link);
-}
-
-
 $is_auth = rand(0, 1);
-
 $user_name = 'Sergey'; // укажите здесь ваше имя
 
-$categories_list = [
+
+
+$link = mysqli_connect('127.0.0.1','root','','schema');
+mysqli_set_charset($link,'utf8');
+
+$sql = 'SELECT * FROM categories';
+$categories = mysqli_query($link, $sql);
+
+if($categories){
+    echo mysqli_error($link);
+}
+$categories_list = mysqli_fetch_all($categories, MYSQLI_ASSOC);
+
+
+$sql2 = 'SELECT * FROM lots';
+$data_list = mysqli_query($link,$sql2);
+
+if ($data_list){
+    echo mysqli_error($link);
+}
+$data_list = mysqli_fetch_all($data_list, MYSQLI_ASSOC);
+
+
+
+
+
+/*$categories_list = [
     'board' => 'Доски и лыжи',
-    'fastenings' => 'Крепления',
+    'mountings' => 'Крепления',
     'boots' => 'Ботинки',
     'clothing' => 'Одежда',
     'tools' => 'Инструменты',
@@ -65,5 +78,5 @@ $data_list = [
         'url'=>'img/lot-6.jpg',
     ]
 
-];
+];*/
 ?>

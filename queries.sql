@@ -1,5 +1,5 @@
 INSERT INTO categories SET categ_id = "boards", categ_name = "Доски и лыжи";
-INSERT INTO categories SET categ_id = "Mountings", categ_name = "Крепления";
+INSERT INTO categories SET categ_id = "mountings", categ_name = "Крепления";
 INSERT INTO categories SET categ_id = "boots", categ_name = "Ботинки";
 INSERT INTO categories SET categ_id = "clothing", categ_name = "Одежда";
 INSERT INTO categories SET categ_id = "tools", categ_name = "Инструменты";
